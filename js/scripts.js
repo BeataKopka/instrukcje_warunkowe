@@ -5,10 +5,11 @@ var a,
 	a = 2;
 	b = 3;
 	value = 7;
+	a = prompt("podaj a");
+	b = prompt("podaj b");
+	value = ((a * a) + (2 * a * b) - (b * b));
+	alert(value);
 
-var a = prompt("podaj a");
-var b = prompt("podaj b");
-var value = alert((a * a) + (2 * a * b) - (b * b));
 console.log('pierwsza zmienna a: ' + a + ' druga zmienna b: ' + b + ' wynosi: ' + value);
 
 if (isNaN(a)) {
@@ -19,14 +20,12 @@ if (isNaN(b)) {
     alert("b nie jest liczbą!");
 }
 
-if ((a * a) + (2 * a * b) - (b * b) == 0) {
+if (value === 0) {
     	alert("Wynik zero")
-} 	else if ((a * a) + (2 * a * b) - (b * b) > 0) {
+} 	else if (value > 0) {
     	alert("Wynik dodatni");
-}	else if ((a * a) + (2 * a * b) - (b * b) < 0) {
+}	else if (value < 0) {
     	alert("Wynik ujemny");
-}	else if (isNaN(a)) {
+}	else if (isNaN(a) || isNaN(b)) {
 		alert("BŁĄD!!!")
-}	else if (isNaN(b)) {
-		alert("BŁĄD!!!")
-}
+}	
